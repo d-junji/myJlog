@@ -2,14 +2,191 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jログ</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="js/main.js"></script>
   </head>
   <body>
-    <h1>Jログサイト</h1>
-    <p>工事中 自己学習中</p>
+    <header>
+      <div class="logo">
+        <h1>Jログサイト</h1>
+      </div>
+      <div class="pc-menu">
+        <nav>
+          <ul>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">menu</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="sp-menu">
+        <span class="material-icons" id="open">menu</span>
+      </div>  
+    </header>
+    <div class="overlay">
+      <span class="material-icons" id="close">close</span>
+      <nav>
+        <ul>
+          <li><a href="#">menu</a></li>
+          <li><a href="#">menu</a></li>
+          <li><a href="#">menu</a></li>
+        </ul>
+      </nav>
+    </div>
 
-    <h2>最近見た映画</h2>
+    <div id="contentsArea"  class="bg">  
+      <section>
+        <div id="slider">
+          <img src="images/1.png" alt="">
+          <img src="images/2.png" alt="">
+        </div>
+      </section>
+      <div class="heading">
+        <h2>最近見た映画</h2>
+      </div>
+      <section class="movei fadein">
+        <div class="mov_icon">
+          <img src="images/アイアンマン.jpg" alt="">
+        </div>
+        <div class="info">
+          <div class="mov_title">
+            <p>アイアンマン</p>
+          </div>
+          <div>
+            <p>トニー・スタークは軍事産業の大手、スターク・インダストリーズの若社長。同時に天才的な発明家で、女性好きのプレイボーイとしても知られる人物でした。そんなある日、新発明のジェリコミサイルの商談のため、アフガニスタンに飛んだトニーを待っていたのは、テロ組織「テン・リングス」の襲撃でした。</p>
+          </div> 
+        </div> 
+      </section>
+      <section class="movei fadein">
+        <div class="mov_icon">
+          <img src="images/アイアンマン2.jpg" alt="">
+        </div>
+        <div class="info">
+          <div class="mov_title">
+            <p>アイアンマン2</p>
+          </div>
+          <div>
+             <p>ジェリコミサイルの開発を要求するテン・リングス。同じく囚われの身であったインセン博士の助けを得たトニーは、襲撃時に体内に侵入し、心臓に達しようとしていた爆弾の破片を阻止する高性能装置アーク・リアクターを開発する一方、ミサイルの開発を装い、脱出用の鋼鉄アーマーの開発に着手します。しかし、アーマーは完成するものの、インセンはトニーのおとりとなって死亡。アメリカ軍に救出され、無事逃げおおせたトニーは、この悲劇的な経験を教訓に、軍事産業からの撤退を宣言します。</p>
+          </div>
+        </div>          
+      </section>
+      <section class="movei fadein">
+        <div class="mov_icon">
+          <img src="images/アイアンマン3.jpg" alt="">
+        </div>
+        <div class="info">
+          <div class="mov_title">
+            <p>アイアンマン3</p>
+          </div>
+          <div>
+            <p>秘書のペッパー・ポッツや友人のジェームズ・ローズをはじめ、周辺の人々に大きな衝撃を与えますが、トニーの変化を快く思わない男が一人いました。その名はオバディア・ステイン。若いトニーを陰から支えてきた後見人的な人物です。オバディアのいらだちをよそに、トニーは新型アーマーの開発に着手。失敗と改良を重ねながら、一定の完成を見たアーマーを纏い、紛争地帯に飛びます。軍事産業から撤退したはずの自社製品を使うテロリストを排除したトニー。社内に裏切り者がいると考えたトニーは、ペッパーの助けを借りて対応策を練ります。</p>
+          </div>
+        </div>          
+      </section>
+      <section>
+        <div class="heading">
+          <h2>オススメ映画</h2>
+        </div>
+        <div class="grid">
+          <a class="col js-modal-open" href="" data-target="modal01">
+            <div class="thumb">
+              <figure><img src="images/apple.jpg"></figure>
+            </div>
+            <div class="origin_title">
+              <p class="upper">記事タイトル この記事はこれだ！</p>
+            </div>
+            <div id="modal01" class="modal js-modal">
+              <div class="modal__bg js-modal-close"></div>
+              <div class="modal__content">
+                <a class="js-modal-close" href=""><span class="material-icons" id="close">close</span></a>
+                <div class="grid2">
+                  <div class="thumb">
+                    <figure><img src="images/apple.jpg"></figure>
+                  </div>
+                  <div class="modal_content_text">
+                    <p>タイトルタイトルタイトル</p>
+                    <p>1つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
+                  </div>  
+                </div>
+              </div><!--modal__inner-->
+            </div><!--modal-->
+          </a>
+          <a class="col js-modal-open" href="" data-target="modal02">
+            <div class="thumb">
+              <figure><img src="images/apple.jpg"></figure>
+            </div>
+            <div class="origin_title">
+              <p class="upper">記事タイトル この記事はこれだ！</p>
+            </div>
+            <div id="modal02" class="modal js-modal">
+              <div class="modal__bg js-modal-close"></div>
+              <div class="modal__content">
+                  <p>2つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
+                  <a class="js-modal-close" href="">閉じる</a>
+              </div><!--modal__inner-->
+            </div><!--modal-->
+          </a>
+          <a class="col js-modal-open" href="" data-target="modal03">
+            <div class="thumb">
+              <figure><img src="images/apple.jpg"></figure>
+            </div>
+            <div class="origin_title">
+              <p class="upper">記事タイトル この記事はこれだ！</p>
+            </div>
+            <div id="modal03" class="modal js-modal">
+              <div class="modal__bg js-modal-close"></div>
+              <div class="modal__content">
+                  <p>3つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
+                  <a class="js-modal-close" href="">閉じる</a>
+              </div><!--modal__inner-->
+            </div><!--modal-->
+          </a>
+          <a class="col js-modal-open" href="" data-target="modal04">
+            <div class="thumb">
+              <figure><img src="images/apple.jpg"></figure>
+            </div>
+            <div class="origin_title">
+              <p class="upper">記事タイトル この記事はこれだ！</p>
+            </div>
+            <div id="modal04" class="modal js-modal">
+              <div class="modal__bg js-modal-close"></div>
+              <div class="modal__content">
+                  <p>4つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
+                  <a class="js-modal-close" href="">閉じる</a>
+              </div><!--modal__inner-->
+            </div><!--modal-->
+          </a>
+
+
+
+
+
+
+        </div>
+      </section>
+
+
+
+
+
+      
+      <div id="page_top"><a href="#"></a></div>
+      
+      <footer id="footer">
+        <p class="text">JUN</p>
+        <p class="text2">&copy;  Jログ</p>
+        <p class="text3">-yorosiku-</p>
+      </footer>
+    </div>
+    <script type="text/javascript" src ="js/humberger.js"></script>
+    
+
   </body>
 
 
