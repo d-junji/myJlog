@@ -1,0 +1,25 @@
+#scroll_effect div {
+	width: 500px;
+	margin: 100px auto;
+	text-align: center;
+	font-size: 2rem;
+	height: 150px;
+	opacity: 0;
+	transition-duration: 1s;
+}
+#scroll_effect div:nth-child(2n+1) {
+	background: #F2FDE8;
+	border: 2px solid #459300;
+	color: #459300;
+	transform: translateX(-300px);
+}
+#scroll_effect div:nth-child(2n+0) {
+	background: #FDE9EF;
+	border: 2px solid #B5375D;
+	color: #B5375D;
+	transform: translateX(300px);
+}
+#scroll_effect div:nth-child(2n+1).effect, #scroll_effect div:nth-child(2n+0).effect {
+	transform: translateX(0);
+	opacity: 1;
+}
